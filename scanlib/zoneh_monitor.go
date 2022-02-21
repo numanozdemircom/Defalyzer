@@ -64,7 +64,7 @@ func ExtractZoneH(urlList []string, matchFromFlag string) [][]string {
 }
 
 func getHostName(url string) string {
-	r, _ := regexp.Compile(":\\/\\/(.[^/]+)")
+	r, _ := regexp.Compile(`:\/\/(.[^/]+)`)
 	var hostName string = r.FindString(url)
 	if hostName == "" {
 		return "Host name could not detect."
